@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    background: #dfdfdf;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    color: #444
+}
+
+.navbar ul {
+    font-family: 'Alata', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    font-size: 17px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+    background-color: #111;
+}
+
+main {
+    margin: 30px auto;
+    width: 1080px;
+    background: #fff;
+    box-shadow: 3px 3px 16px 0px #aaa;
+    padding: 30px;
+}
+
+.toCenter {
+    text-align: center;
+}
+
+.esquerda {
+    display: block;
+    width: 70px;
+    float: left;
+}
+
+.direita {
+    display: block;
+    width: 700px;
+    float: right;
+}
+
+footer {
+    clear: both;
+}
