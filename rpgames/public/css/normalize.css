@@ -347,4 +347,12 @@
   [hidden] {
     display: none;
   }
+
+  input {
+    border: 1px solid #aaa;
+  }
+
+  button {
+    border: 1px solid #aaa;
+  }
   

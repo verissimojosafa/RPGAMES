@@ -9,8 +9,8 @@
     </head>
     <body>
         <header>
-            <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
-
+                <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
+                
             <nav class="navbar">
                 <ul>
                     <li class="link"><a href="index.html">Home</a></li>
@@ -34,31 +34,50 @@
             <h1 class="center-text">RPGAMES</h1>
             
             <div class="main-content">
-                <article class="text-media">
-                    <strong>
-                        <ol>
-                            <li><em>Nioh</em></li>
-                            <li>Dark Souls</li>
-                            <li>Blood Borne</li>
-                            <li>The Surge</li>
-                            <li>The Surge 2</li>
-                        </ol>
-                    </strong>
+                <article>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th>Nome</th>
+                                <th>Classe</th>
+                                <th>Github</th>
+                            </tr>
+                        </thead>
 
-                    <hr width="80%" align="left" color="#aaa">
-                    
-                    <div class="rpg-description">
-                        <p>
-                            <i>Nioh</i> é um jogo eletrônico de
-                            RPG de ação desenvolvido pela Team Ninja e publicado pela Koei Tecmo para o Playstation 4 e Windows PC.
-                        </p>
-                    </div>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>Ancelmo Cerqueira</td>
+                                <td>Desenvolvedor Front-end</td>
+                                <td><em>ancelmocerqueira</em></td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row"></th>
+                                <td>Jonas Guilherme</td>
+                                <td>Desenvolvedor Front-end</td>
+                                <td><em>Jonas23-alt</em></td>
+                            </tr>
 
-                    <hr width="80%" align="left" color="#aaa">
+                            <tr>
+                                <th scope="row"></th>
+                                <td>Josafá Veríssimo</td>
+                                <td>Desenvolvedor Front-end</td>
+                                <td><em>verissimojosafa</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </article>
     
                 <article>
-                        <img src="../public/img/nioh.jpg" alt="foto do jogo Nioh" title="Nioh" >
+                    <h2>Projetos Futuros</h2>
+
+                    <ul>
+                        <li>AllGames</li>
+                        <li>ProgrammingRPG</li>
+                        <li>RPGAMES <strong>Master</strong> Fórum</li>
+                    </ul>
                 </article>
             </div>
                 
@@ -86,6 +105,15 @@
                     <li><a href="colaboradores.html">Colaboradores</a></li>
                 </ul>
             </article>
+
+            <script>
+                let table = document.querySelector('.main-content table'),
+                    counter = 1;
+
+                table.querySelectorAll('th[scope="row"').forEach(function(element) {
+                    element.textContent = counter++;
+                });
+            </script>
         </footer>
     </body>
 </html>

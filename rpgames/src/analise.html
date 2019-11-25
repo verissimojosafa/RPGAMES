@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>RPGAMES</title>
+        <link rel="stylesheet" href="../public/css/normalize.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <link rel="stylesheet" href="../public/css/rodape.css">
+    </head>
+
+    <body>
+      <header>
+            <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
+            
+            <nav class="navbar">
+                <ul>
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="ranking.html">Melhores RPGs</a></li>
+                    <li class="link"><a href="cadastrar.html">Cadastrar Tópico</a></li>
+                    <li class="link"><a href="analise.html">Postar Análise</a></li>
+                    <li class="link"><a href="#">Login</a></li>
+
+                    <li class="search">
+                        <form action="">
+                            <input id="busca" type="search" name="search" placeholder="Ex.: Nioh 2">
+                            <button type="submit">pesquisar</button>
+                        </form>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="center-text">RPGAMES</h1>
+            
+            <div class="main-content">
+                <article>
+                    <table>
+                            <tr>
+                                <th scope="col">Jogos</th>
+                                <th>Análises dos Jogos</th>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Nioh</th>
+                                <td><em>(Falta análise)</em></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Blood Borne</th>
+                                <td><em>(Falta análise)</em></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Dark Souls</th>
+                                <td><em>(Falta análise)</em></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Assassin’s Creed Odyssey</th>
+                                <td><em>(Falta análise)</em></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Diablo 2</th>
+                                <td>Totamente enfurecido por ser derrotado e com sede de vingança (em Diablo I), Diablo, o poderoso Senhor do Terror, tenta, e conquista aos poucos, a alma do herói que o derrotou.</td>
+                            </tr>
+                    
+                        </table>
+                </article>
+
+                <article class="form-in-article">
+                    <form onsubmit="insertAnalyze(event)">
+                        <input id="title" type="text" placeholder="Nome do Jogo" required="">
+                        <input id="analyze" type="text" placeholder="Análise (max: 255)" required="">
+
+                        <button type="submit">Postar</button>
+                    </form>
+                </article>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <article>
+                    <h1>RPGAMES</h1>
+            </article>
+
+            <article>
+                <dl>
+                    <dt>Desenvolvedores Front-end</dd>
+                    <dd>Josafá Verissímo</dd>
+                    <dd>Jonas Guilherme</dd>
+                    <dd>Ancelmo Cerqueira</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="colaboradores.html">Colaboradores</a></li>
+                </ul>
+            </article>
+
+            <script>
+                function insertAnalyze(event) {
+                    event.preventDefault();
+
+                    let table = document.querySelector('.main-content table'),
+                        gameTopics = table.querySelectorAll('th[scope="row"]'),
+                        inTopics = false,
+                        indexTopic = null;
+
+                    gameTopics.forEach(function(element, index) {
+                        if(element.textContent == event.target.title.value) {
+                            inTopics = true;
+                            indexTopic = index;
+                            return;
+                        }
+                    });
+
+                    if(!inTopics) {
+                        alert("Este jogo não está listado");
+                        return;
+                    }
+                    
+                    console.log(gameTopics[indexTopic].parentNode.querySelector('td'));
+                    if(gameTopics[indexTopic].parentNode.querySelector('td').textContent != "(Falta análise)") {
+                        // form values
+                        let gameName = event.target.title.value,
+                            analyze = event.target.analyze.value;
+
+                        // elements to table
+                        let tr = document.createElement('tr'),
+                            th = document.createElement('th'),
+                            td = document.createElement('td'),
+                            a = document.createElement('a');
+
+                        th.textContent = gameName;
+                        th.setAttribute('scope', 'row');
+                        td.textContent = analyze;
+                        a.setAttribute('href', '#');
+
+                        th.appendChild(a);
+
+                        tr.appendChild(th);
+                        tr.appendChild(td);
+
+                        table.appendChild(tr);
+                    } else {
+                        gameTopics[indexTopic].parentNode.querySelector('td').textContent = analyze.value;
+                    }
+                }
+            </script>
+        </footer>
+    </body>
+</html>

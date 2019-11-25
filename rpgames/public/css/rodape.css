@@ -1,0 +1,28 @@
+.rodape {
+    background-color: #1c1c1c;
+    color:#fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape dl * {
+    margin-bottom: 4px;
+}
+
+.rodape ul {
+    list-style-type: none;
+}
+
+.rodape ul li a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.rodape ul li a:hover {
+    color: #ff1;
+}
+
+.rodape ul li {
+    margin-bottom: 4px;
+}

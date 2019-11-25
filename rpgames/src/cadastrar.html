@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>RPGAMES</title>
+        <link rel="stylesheet" href="../public/css/normalize.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <link rel="stylesheet" href="../public/css/rodape.css">
+
+        <style>
+            th[scope="row"] a {
+                color: #47f;
+                text-decoration: none;
+            }
+
+            th[scope="row"]{
+                transition: background .3s;
+            }
+
+            th[scope="row"] a:hover{
+                color: #99f
+            }
+
+            th[scope="row"]:hover{
+                background: #303030;
+            }
+        </style>
+    </head>
+
+    <body>
+       <header>
+            <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
+            
+            <nav class="navbar">
+                <ul>
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="ranking.html">Melhores RPGs</a></li>
+                    <li class="link"><a href="cadastrar.html">Cadastrar Tópico</a></li>
+                    <li class="link"><a href="analise.html">Postar Análise</a></li>
+                    <li class="link"><a href="#">Login</a></li>
+
+                    <li class="search">
+                        <form action="">
+                            <input id="busca" type="search" name="search" placeholder="Ex.: Nioh 2">
+                            <button type="submit">pesquisar</button>
+                        </form>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="center-text">RPGAMES</h1>
+            
+            <div class="main-content">
+                <article>
+                    <table>
+                        <tr>
+                            <th>Jogos</th>
+                            <th>Tópicos dos Jogos</th>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><a href="#">Nioh</a></th>
+                            <td>Explore uma perspectiva fantástica e obscura do Japão do século 16.</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><a href="#">Blood Borne</a></th>
+                            <td>"Bloodborne não é como uma mera namoradinha de fins de semana, é como uma esposa que todos os dias questiona o teu amor por ela"</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><a href="#">Dark Souls</a></th>
+                            <td>Ao jogar Dark Souls Remastered, eu frequentemente sentia que a From Software estava fazendo bullying comigo.</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><a href="#">Assassin’s Creed Odyssey</a></th>
+                            <td>De exilado à lenda viva, embarque em uma odisseia para descobrir os segredos do seu passado e mudar o destino da Grécia Antiga.</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><a href="#">Diablo 2</a></th>
+                            <td>Totamente enfurecido por ser derrotado e com sede de vingança (em Diablo I), Diablo, o poderoso Senhor do Terror, tenta, e conquista aos poucos, a alma do herói que o derrotou.</td>
+                        </tr>
+                
+                    </table>
+                </article>
+
+                <article class="form-in-article">
+                    <form onsubmit="insertTopic(event)">
+                        <input id="title" type="text" placeholder="Nome do Jogo" required="">
+                        <input id="topic" type="text" placeholder="Tópico (max: 255)" required="">
+
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </article>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <article>
+                    <h1>RPGAMES</h1>
+            </article>
+
+            <article>
+                <dl>
+                    <dt>Desenvolvedores Front-end</dd>
+                    <dd>Josafá Verissímo</dd>
+                    <dd>Jonas Guilherme</dd>
+                    <dd>Ancelmo Cerqueira</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="colaboradores.html">Colaboradores</a></li>
+                </ul>
+            </article>
+
+            <script>
+                let table = document.querySelector('.main-content table');
+
+                table.querySelectorAll('th[scope="row"]').forEach(function(element) {
+                    
+                });
+
+                function insertTopic(event) {
+                    event.preventDefault();
+
+                    let table = document.querySelector('.main-content table');
+                    
+                    // form values
+                    let gameName = event.target.title.value,
+                        topic = event.target.topic.value;
+
+                    // elements to table
+                    let tr = document.createElement('tr'),
+                        th = document.createElement('th'),
+                        td = document.createElement('td'),
+                        a = document.createElement('a');
+
+                    th.textContent = gameName;
+                    th.setAttribute('scope', 'row');
+                    td.textContent = topic;
+                    a.setAttribute('href', '#');
+
+                    th.appendChild(a);
+
+                    tr.appendChild(th);
+                    tr.appendChild(td);
+
+                    table.appendChild(tr);
+                    
+                }
+            </script>
+        </footer>
+    </body>
+</html>

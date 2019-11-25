@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>RPGAMES</title>
+        <link rel="stylesheet" href="../public/css/normalize.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <link rel="stylesheet" href="../public/css/rodape.css">
+    </head>
+
+	<body>
+        <header>
+            <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
+            
+            <nav class="navbar">
+                <ul>
+                    <li class="link"><a href="index.html">Home</a></li>
+                    <li class="link"><a href="ranking.html">Melhores RPGs</a></li>
+                    <li class="link"><a href="cadastrar.html">Cadastrar Tópico</a></li>
+                    <li class="link"><a href="analise.html">Postar Análise</a></li>
+                    <li class="link"><a href="#">Login</a></li>
+
+                    <li class="search">
+                        <form action="">
+                            <input id="busca" type="search" name="search" placeholder="Ex.: Nioh 2">
+                            <button type="submit">pesquisar</button>
+                        </form>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="center-text">Melhores RPGs do ano</h1>
+            
+            <div class="main-content">
+                <article>
+                    <table>
+                        <thead>
+                            <th scope="col">#</th>
+                            <th scope="col">RPG</th>
+                        </thead>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Nioh</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Dark Souls</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Blood Borne</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Surge</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Surge 2</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Baldur’s Gate 2: Shadows of Amn </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>NIeR: Automata</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Fable</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Ni no Kuni 2: Revenant Kingdom</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Assassin’s Creed Odyssey</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Diablo 2</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Sims 4</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Surge 2</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>World of Warcraft</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Witcher 3: Wild Hunt</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Final Fantasy VII</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Chrono Trigger</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Witcher 3: The Wild Hunt</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>The Elder Scrolls V: Skyrim</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Mass Effect 3</td>
+                        </tr>
+                    </table>
+                </article>
+
+                <article>
+                    <form action="">
+                        <select name="ordering" id="order">
+                            <optgroup>
+                                <option value="asd" disabled selected>Campo de filtro</option>
+                                <option value="votes">Mais votado</option>
+                                <option value="comments">Mais comentado</option>
+                                <option value="shared">Mais compartilhados</option>
+                            </optgroup>
+                        </select>
+                    </form>
+                </article>
+            </div>
+        </main>
+        
+     
+        <footer class="rodape">
+                <article>
+                        <h1>RPGAMES</h1>
+                </article>
+    
+                <article>
+                    <dl>
+                        <dt>Desenvolvedores Front-end</dd>
+                        <dd>Josafá Verissímo</dd>
+                        <dd>Jonas Guilherme</dd>
+                        <dd>Ancelmo Cerqueira</dd>
+                    </dl>
+                </article>
+                
+                <article>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Fórum</a></li>
+                        <li><a href="ranking.html">Ranking</a></li>
+                        <li><a href="colaboradores.html">Colaboradores</a></li>
+                    </ul>
+                </article>
+
+                <script>
+                    let table = document.querySelector('.main-content table'),
+                        counter = 1;
+                    
+                    table.querySelectorAll('th[scope="row"]').forEach(function(element) {
+                        element.textContent = counter++;
+                    });
+                </script>
+        </footer>
+    </body>
+</html>
