@@ -29,7 +29,7 @@
 
     <body>
        <header>
-            <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
+            <div class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</div>
             
             <nav class="navbar">
                 <ul>
@@ -37,10 +37,10 @@
                     <li class="link"><a href="ranking.html">Melhores RPGs</a></li>
                     <li class="link"><a href="cadastrar.html">Cadastrar Tópico</a></li>
                     <li class="link"><a href="analise.html">Postar Análise</a></li>
-                    <li class="link"><a href="#">Login</a></li>
+                    <li class="link"><a href="colaboradores.html">Login</a></li>
 
                     <li class="search">
-                        <form action="">
+                        <form>
                             <input id="busca" type="search" name="search" placeholder="Ex.: Nioh 2">
                             <button type="submit">pesquisar</button>
                         </form>
@@ -54,7 +54,7 @@
             <h1 class="center-text">RPGAMES</h1>
             
             <div class="main-content">
-                <article>
+                <div>
                     <table>
                         <tr>
                             <th>Jogos</th>
@@ -87,41 +87,40 @@
                         </tr>
                 
                     </table>
-                </article>
+                </div>
 
-                <article class="form-in-article">
+                <div class="form-in-article">
                     <form onsubmit="insertTopic(event)">
                         <input id="title" type="text" placeholder="Nome do Jogo" required="">
                         <input id="topic" type="text" placeholder="Tópico (max: 255)" required="">
 
                         <button type="submit">Cadastrar</button>
                     </form>
-                </article>
+                </div>
             </div>
         </main>
 
         <footer class="rodape">
-            <article>
-                    <h1>RPGAMES</h1>
-            </article>
+            <div>
+                <h1>RPGAMES</h1>
+            </div>
 
-            <article>
+            <div>
                 <dl>
-                    <dt>Desenvolvedores Front-end</dd>
+                    <dt>Desenvolvedores Front-end</dt>
                     <dd>Josafá Verissímo</dd>
                     <dd>Jonas Guilherme</dd>
                     <dd>Ancelmo Cerqueira</dd>
                 </dl>
-            </article>
+            </div>
             
-            <article>
+            <div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Fórum</a></li>
                     <li><a href="ranking.html">Ranking</a></li>
                     <li><a href="colaboradores.html">Colaboradores</a></li>
                 </ul>
-            </article>
+            </div>
 
             <script>
                 let table = document.querySelector('.main-content table');

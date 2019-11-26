@@ -6,10 +6,16 @@
         <link rel="stylesheet" href="../public/css/normalize.css">
         <link rel="stylesheet" href="../public/css/style.css">
         <link rel="stylesheet" href="../public/css/rodape.css">
+
+        <style>
+            ol li {
+                font-weight: 900;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <h1 class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</h1>
+            <div class="super-logo center-text"><p style="color: #77d">R</p><p style="color: #77dd77">P</p><p style="color: #FFD700">G</p>AMES</div>
 
             <nav class="navbar">
                 <ul>
@@ -17,10 +23,10 @@
                     <li class="link"><a href="ranking.html">Melhores RPGs</a></li>
                     <li class="link"><a href="cadastrar.html">Cadastrar Tópico</a></li>
                     <li class="link"><a href="analise.html">Postar Análise</a></li>
-                    <li class="link"><a href="#">Login</a></li>
+                    <li class="link"><a href="colaboradores.html">Login</a></li>
 
                     <li class="search">
-                        <form action="">
+                        <form>
                             <input id="busca" type="search" name="search" placeholder="Ex.: Nioh 2">
                             <button type="submit">pesquisar</button>
                         </form>
@@ -34,18 +40,16 @@
             <h1 class="center-text">RPGAMES</h1>
             
             <div class="main-content">
-                <article class="text-media">
-                    <strong>
-                        <ol>
-                            <li><em>Nioh</em></li>
-                            <li>Dark Souls</li>
-                            <li>Blood Borne</li>
-                            <li>The Surge</li>
-                            <li>The Surge 2</li>
-                        </ol>
-                    </strong>
+                <div class="text-media">
+                    <ol>
+                        <li><em>Nioh</em></li>
+                        <li>Dark Souls</li>
+                        <li>Blood Borne</li>
+                        <li>The Surge</li>
+                        <li>The Surge 2</li>
+                    </ol>
 
-                    <hr width="80%" align="left" color="#aaa">
+                    <hr>
                     
                     <div class="rpg-description">
                         <p>
@@ -54,38 +58,37 @@
                         </p>
                     </div>
 
-                    <hr width="80%" align="left" color="#aaa">
-                </article>
+                    <hr>
+                </div>
     
-                <article>
-                        <img src="../public/img/nioh.jpg" alt="foto do jogo Nioh" title="Nioh" >
-                </article>
+                <div>
+                    <img src="../public/img/nioh.jpg" alt="foto do jogo Nioh" title="Nioh" >
+                </div>
             </div>
                 
         </main>
 
         <footer class="rodape">
-            <article>
-                    <h1>RPGAMES</h1>
-            </article>
+            <div>
+                <h1>RPGAMES</h1>
+            </div>
 
-            <article>
+            <div>
                 <dl>
-                    <dt>Desenvolvedores Front-end</dd>
+                    <dt>Desenvolvedores Front-end</dt>
                     <dd>Josafá Verissímo</dd>
                     <dd>Jonas Guilherme</dd>
                     <dd>Ancelmo Cerqueira</dd>
                 </dl>
-            </article>
+            </div>
             
-            <article>
+            <div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Fórum</a></li>
                     <li><a href="ranking.html">Ranking</a></li>
                     <li><a href="colaboradores.html">Colaboradores</a></li>
                 </ul>
-            </article>
+            </div>
         </footer>
     </body>
 </html>

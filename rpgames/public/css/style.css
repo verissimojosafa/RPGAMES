@@ -7,13 +7,23 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+hr {
+    height:2px;
+    border-width:0;
+    color: #444;
+    background-color: #444;
+    width: 80%;
+    text-align: left;
+    margin-left: 0;
+}
+
 
 header {
     background: #fff;
     padding-top: 10px;
 }
 
-h1 {
+.rodape h1 {
     color: #444
 }
 
@@ -110,24 +120,26 @@ main {
     text-align: center;
 }
 
-.main-content article.form-in-article {
+.main-content div.form-in-article {
     padding-left: 10px;
     margin-left: 10px;
     border-left: 1px solid #aaa;
 }
 
-.main-content article.form-in-article input {
+.main-content div.form-in-article input {
     margin-bottom: 10px;
     padding: 15px;
 }
 
-.main-content article.form-in-article button {
+.main-content div.form-in-article button {
     padding: 15px;
 }
 
 .super-logo {
     font-family: 'Press Start 2P', cursive;
     font-size: 4em;
+    padding: 50px;
+    font-weight: 900;
 }
 
 .super-logo *{
